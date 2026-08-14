@@ -4,6 +4,12 @@
 
 Convierte los terminos ingresados por el usuario en una simulacion educativa reproducible: costo financiero modelado, mes estimado libre de deuda, comparacion current/avalanche/snowball, carga BNPL por calendario y refinanciacion hipotetica.
 
+## Entornos
+
+- Produccion: https://brianpajares.github.io/debt-bnpl-truth/
+- Repositorio: https://github.com/brianpajares/debt-bnpl-truth
+- Drive source of truth: https://drive.google.com/drive/folders/1yr3qFBocowQGqWe4BxbZSL086G1CD3F9
+
 ## Flujo de prueba
 
 1. Abrir la app.

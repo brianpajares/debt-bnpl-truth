@@ -4,6 +4,9 @@ Aplicativo FREE BETA para estimar el costo total de deudas y BNPL, comparar curr
 
 ## Estado
 
+- Produccion GitHub Pages: https://brianpajares.github.io/debt-bnpl-truth/
+- Repositorio: https://github.com/brianpajares/debt-bnpl-truth
+- Source of truth en Drive: https://drive.google.com/drive/folders/1yr3qFBocowQGqWe4BxbZSL086G1CD3F9
 - Motor deterministico en JavaScript puro.
 - No requiere login ni conexion bancaria para probar.
 - No envia datos financieros a IA ni a terceros.
@@ -15,7 +18,7 @@ Aplicativo FREE BETA para estimar el costo total de deudas y BNPL, comparar curr
 ```bash
 npm test
 npm run build
-npx serve .
+npm run dev
 ```
 
 ## Principios del PRD implementados

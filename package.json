@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx serve .",
+    "dev": "node tools/server.mjs",
     "test": "node tests/engine.test.mjs",
     "build": "node tests/engine.test.mjs"
   },

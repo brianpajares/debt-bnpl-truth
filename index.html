@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10251f">
+    <title>Debt & BNPL Truth</title>
+    <link rel="stylesheet" href="./src/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-band">
+        <nav class="topbar" aria-label="Primary">
+          <strong>Debt & BNPL Truth</strong>
+          <div>
+            <a href="#analysis">Analyze</a>
+            <a href="#calendar">BNPL</a>
+            <a href="#methodology">Methodology</a>
+          </div>
+        </nav>
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">FREE BETA · deterministic payoff engine</p>
+            <h1>See the real cost of your debt.</h1>
+            <p class="lead">Compare minimum payments, avalanche, snowball, BNPL stacking and a refinance what-if without bank connections or card numbers.</p>
+            <a class="primary-action" href="#analysis">Analyze my debt</a>
+          </div>
+          <div class="truth-panel" aria-label="Demo result">
+            <span>Sample truth</span>
+            <strong id="heroTruth">$150 extra can change the payoff path.</strong>
+            <div class="mini-bars">
+              <i style="height: 84%"></i><i style="height: 52%"></i><i style="height: 55%"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" id="analysis">
+        <aside class="input-rail">
+          <div class="rail-header">
+            <div>
+              <p class="eyebrow">Portfolio</p>
+              <h2>Debt terms</h2>
+            </div>
+            <button id="addDebt" class="icon-button" type="button" title="Add debt">+</button>
+          </div>
+
+          <div class="field-row">
+            <label>Country
+              <select id="country">
+                <option value="US">United States</option>
+                <option value="PE">Peru</option>
+                <option value="GB">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="EU">Eurozone</option>
+              </select>
+            </label>
+            <label>Currency
+              <select id="currency">
+                <option value="USD">USD</option>
+                <option value="PEN">PEN</option>
+                <option value="GBP">GBP</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="range-label">Extra monthly payment
+            <input id="extraPayment" type="range" min="0" max="1000" step="25" value="150">
+            <output id="extraValue">$150</output>
+          </label>
+
+          <div id="debtList" class="debt-list"></div>
+        </aside>
+
+        <section class="results">
+          <div class="score-strip">
+            <div><span>Total principal</span><strong id="principal">$0</strong></div>
+            <div><span>Monthly debt budget</span><strong id="budget">$0</strong></div>
+            <div><span>Best modeled savings</span><strong id="bestSavings">$0</strong></div>
+            <div><span>Model version</span><strong>FREE_BETA_V1.0</strong></div>
+          </div>
+
+          <div class="comparison-grid">
+            <article class="scenario" id="baselineCard"></article>
+            <article class="scenario highlight" id="avalancheCard"></article>
+            <article class="scenario" id="snowballCard"></article>
+          </div>
+
+          <section class="chart-section" aria-label="Payoff balance chart">
+            <div class="section-title">
+              <div>
+                <p class="eyebrow">Trajectory</p>
+                <h2>Modeled balances</h2>
+              </div>
+              <div class="segmented" role="tablist" aria-label="Chart scenario">
+                <button class="active" data-chart="baseline">Current</button>
+                <button data-chart="avalanche">Avalanche</button>
+                <button data-chart="snowball">Snowball</button>
+              </div>
+            </div>
+            <canvas id="balanceChart" width="980" height="280"></canvas>
+          </section>
+
+          <section class="two-column">
+            <article id="calendar" class="plain-section">
+              <div class="section-title">
+                <div>
+                  <p class="eyebrow">BNPL calendar</p>
+                  <h2>Stacking load</h2>
+                </div>
+                <strong id="peakMonth">No BNPL</strong>
+              </div>
+              <div id="bnplList" class="calendar-list"></div>
+            </article>
+
+            <article class="plain-section">
+              <div class="section-title">
+                <div>
+                  <p class="eyebrow">Refinance what-if</p>
+                  <h2>Hypothetical comparison</h2>
+                </div>
+              </div>
+              <div class="field-row">
+                <label>Rate
+                  <input id="refiRate" type="number" min="0" step="0.1" value="12">
+                </label>
+                <label>Term months
+                  <input id="refiTerm" type="number" min="1" step="1" value="60">
+                </label>
+              </div>
+              <div class="field-row">
+                <label>Origination fee
+                  <input id="refiFee" type="number" min="0" step="10" value="300">
+                </label>
+                <label>Rate type
+                  <select id="refiRateType">
+                    <option value="APR">APR</option>
+                    <option value="EAR">EAR/TEA</option>
+                    <option value="TCEA">TCEA</option>
+                    <option value="ZERO">0%</option>
+                  </select>
+                </label>
+              </div>
+              <div id="refiResult" class="refi-result"></div>
+            </article>
+          </section>
+
+          <section class="plain-section warning-zone">
+            <div class="section-title">
+              <div>
+                <p class="eyebrow">Disclosures</p>
+                <h2>Warnings and assumptions</h2>
+              </div>
+            </div>
+            <ul id="warnings"></ul>
+          </section>
+        </section>
+      </section>
+
+      <section class="methodology" id="methodology">
+        <div>
+          <p class="eyebrow">Methodology</p>
+          <h2>Transparent formulas, no lender steering.</h2>
+        </div>
+        <div class="method-grid">
+          <p><strong>APR:</strong> annual nominal divided by 12.</p>
+          <p><strong>EAR/TEA/TCEA:</strong> converted to effective monthly rate.</p>
+          <p><strong>Current:</strong> pays only entered minimums.</p>
+          <p><strong>Avalanche:</strong> targets highest modeled monthly cost rate.</p>
+          <p><strong>Snowball:</strong> targets smallest balance first.</p>
+          <p><strong>BNPL:</strong> date-based installments and 14-day overlap.</p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/app.mjs"></script>
+  </body>
+</html>

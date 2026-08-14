@@ -1,0 +1,6 @@
+rate_type,formula,notes
+APR,monthly_rate = annual_rate / 100 / 12,Nominal annual percentage rate
+EAR,monthly_rate = (1 + annual_rate / 100)^(1/12) - 1,Effective annual rate
+TEA,monthly_rate = (1 + annual_rate / 100)^(1/12) - 1,Tasa efectiva anual
+TCEA,monthly_rate = (1 + annual_rate / 100)^(1/12) - 1,All-in effective cost proxy when user confirms fees are included
+ZERO,monthly_rate = 0,0% interest under entered terms only

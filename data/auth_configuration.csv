@@ -1,0 +1,10 @@
+setting,value
+anonymous_analyses_per_day,2
+authenticated_analyses_per_month,30
+pdf_reports_per_month,10
+debts_per_portfolio,20
+statement_uploads,OFF
+raw_financial_data_to_ai,OFF
+bot_protection,Turnstile plus rate limit
+rls,Required for saved portfolios
+delete_account,Required

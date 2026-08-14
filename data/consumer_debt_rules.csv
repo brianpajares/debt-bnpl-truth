@@ -1,0 +1,6 @@
+jurisdiction,rule,effective_as_of,behavior,source_tier
+PE,TCEA-aware consumer credit and prepayment right,2026-08-14,Use TCEA conversion and seed prepayment penalty as 0 where applicable,Tier A
+US,Minimum-payment and negative amortization disclosure context,2026-08-14,Warn when entered minimum does not amortize,Tier A
+GB,Consumer credit context,2026-08-14,Show jurisdiction disclosure only,Tier A
+CA,Consumer credit context,2026-08-14,Show jurisdiction disclosure only,Tier A
+EU,Consumer loan benchmark context,2026-08-14,Show benchmark context only,Tier A

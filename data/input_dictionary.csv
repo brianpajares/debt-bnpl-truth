@@ -1,0 +1,14 @@
+field,description,type,required,privacy_note
+country_code,Country or jurisdiction,ISO-2,true,Non-sensitive
+currency,Main currency,ISO-4217,true,Non-sensitive
+available_extra_payment,Extra monthly amount available,currency,false,Financial input; do not send to analytics
+debt_type,Debt category,enum,true,Non-identifying
+balance,Current balance,currency,true,Financial input; do not log raw
+rate_type,APR EAR TEA TCEA ZERO,enum,true,Non-identifying
+annual_rate,Annual rate percent,number,true,Financial input
+minimum_payment,Minimum or scheduled payment,currency,true,Never inferred
+recurring_fee,Monthly fee not included in rate,currency,false,Never invented
+remaining_installments,Installments remaining,integer,false,BNPL and loans
+payment_frequency,Monthly Biweekly Weekly Custom,enum,false,Calendar input
+next_due_date,Next due date,date,false,Avoid analytics
+early_payment_allowed,Allows strategy prepayment,boolean,true,User-confirmable

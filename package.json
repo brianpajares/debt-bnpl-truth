@@ -1,0 +1,14 @@
+{
+  "name": "debt-bnpl-truth",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "test": "node tests/engine.test.mjs",
+    "build": "node tests/engine.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

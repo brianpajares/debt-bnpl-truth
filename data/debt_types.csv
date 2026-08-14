@@ -1,0 +1,7 @@
+debt_type,default_early_payment_allowed,calendar_required,notes
+CARD,true,false,Revolving credit card balance
+LOAN,true,false,Personal or installment loan
+BNPL,false,true,Short-term installments with stacking view
+STORE,true,false,Store financing
+LINE,true,false,Line of credit
+OTHER,true,false,User-described debt without creditor identifiers

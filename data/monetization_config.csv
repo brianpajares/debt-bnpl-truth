@@ -1,0 +1,6 @@
+plan,price,enabled,features
+Free,0,false,3 analyses per month after beta
+Full Debt Report,3.99,false,One complete PDF report
+Debt Truth Pro,5.99,false,Saved portfolios and monthly recheck
+Annual Pro,49,false,Same features annualized
+FREE_BETA,0,true,Core analysis free within quotas

@@ -1,0 +1,10 @@
+market,product,benchmark,as_of,source_tier,use
+US,credit_cards_interest_bearing_apr,22.15%,2026-05,Tier A official/context,Context only
+US,personal_loan_24m_apr,11.86%,2026-05,Tier A official/context,Context only
+PE,consumer_credit_average_rate_pen,57.30%,2026-07-28,Tier A official/context,Context only
+PE,maximum_conventional_consumer_pen,114.13%,2026-07,Tier A official/context,Contextual validation
+GB,credit_card_rate,21.45%,2026-05,Tier A official/context,Context only
+GB,new_personal_loan_rate,9.66%,2026-05,Tier A official/context,Context only
+CA,credit_card_rate,21.21%,2026-05,Tier A official/context,Context only
+CA,personal_loan_plans,8.06%,2026-05,Tier A official/context,Context only
+EU,new_consumer_loans_aar,7.59%,2026-04,Tier A official/context,Context only

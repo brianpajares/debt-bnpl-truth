@@ -1,0 +1,5 @@
+strategy,target_rule,budget_rule
+baseline,None; pay entered minimums only,No automatic rollover
+avalanche,Highest modeled monthly cost rate first,Constant debt budget plus entered extra payment
+snowball,Smallest outstanding balance first,Constant debt budget plus entered extra payment
+refinance,Hypothetical amortized replacement term,Not a recommendation or offer

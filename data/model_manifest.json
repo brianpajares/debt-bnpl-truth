@@ -1,0 +1,29 @@
+{
+  "product": "Debt & BNPL Truth",
+  "model_version": "FREE_BETA_V1.0",
+  "published_at": "2026-08-14",
+  "billing_enabled": false,
+  "paywall_enabled": false,
+  "raw_financial_data_to_ai": false,
+  "horizon_months": 600,
+  "last_known_good": true,
+  "files": [
+    "input_dictionary.csv",
+    "rate_conversion_rules.csv",
+    "debt_types.csv",
+    "payoff_strategies.csv",
+    "country_credit_benchmarks.csv",
+    "consumer_debt_rules.csv",
+    "bnpl_rules.csv",
+    "validation_cases.csv",
+    "disclosures.csv",
+    "auth_configuration.csv",
+    "monetization_config.csv",
+    "translations.csv"
+  ],
+  "gates": {
+    "schema_validation": true,
+    "regression_tests": true,
+    "freshness_review_required_for_legal_rules": true
+  }
+}
